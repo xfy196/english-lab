@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fbf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #16181d;
+  --color-muted: #6c7079;
+  --color-line: #eae5dd;
+
+  --color-brand: #5b5bf5;
+  --color-brand-dark: #4342d6;
+  --color-brand-soft: #eeedff;
+  --color-accent: #f5a524;
+  --color-accent-soft: #fff4e0;
+  --color-good: #16a06a;
+  --color-good-soft: #e6f7ef;
+  --color-bad: #e0453a;
+  --color-bad-soft: #fdeceb;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-display: ui-serif, "Iowan Old Style", Georgia, "Times New Roman", serif;
+
+  --radius-xl2: 1.25rem;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: #d9d8ff;
+    color: #16181d;
+  }
+}
+
+/* ---------- 卡片翻面 ---------- */
+.flip-scene {
+  perspective: 1400px;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.75rem;
+  overflow: hidden;
+}
+.flip-face--back {
+  transform: rotateY(180deg);
+}
+
+/* ---------- 动效 ---------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-rise {
+  animation: rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-pop {
+  animation: pop 0.3s ease-out both;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  30%,
+  70% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+}
+.animate-shake {
+  animation: shake 0.35s ease-in-out both;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(91, 91, 245, 0.28);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(91, 91, 245, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 91, 245, 0);
+  }
+}
+.animate-sound {
+  animation: pulse-ring 1.2s ease-out infinite;
+}
+
+/* 细滚动条 */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ddd7cd;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #c9c2b6;
+  background-clip: content-box;
+}

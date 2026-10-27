@@ -1,0 +1,36 @@
+{
+  "name": "english-lab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3200",
+    "dev:webpack": "next dev --webpack -p 3200",
+    "build": "next build",
+    "build:webpack": "next build --webpack",
+    "start": "next start -p 3200",
+    "lint": "eslint",
+    "packs": "node scripts/build-packs.mjs",
+    "packs:dry": "node scripts/build-packs.mjs --dry-run",
+    "packs:check": "node scripts/publish-packs.mjs check",
+    "packs:publish": "node scripts/publish-packs.mjs urls",
+    "packs:cdn": "node scripts/publish-packs.mjs cdn",
+    "words:check": "node scripts/check-phonetic.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.61.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/turbopack": "^4.3.3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5"
+  }
+}

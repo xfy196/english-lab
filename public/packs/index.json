@@ -1,0 +1,64 @@
+{
+  "v": 1,
+  "version": "20261027",
+  "builtAt": "2026-10-27T05:42:14.359Z",
+  "seed": 60,
+  "packs": [
+    {
+      "id": "zk",
+      "name": "中考核心词",
+      "subtitle": "初中毕业 / 中考大纲",
+      "level": "A2",
+      "count": 1158,
+      "bytes": 73909,
+      "file": "zk.20261027.json",
+      "url": "/packs/zk.20261027.json",
+      "sha256": "fedd4ea2d1b4596171b3e15c4b42d08cb8387b3a1de10133c1ed2d2f1bf56c93"
+    },
+    {
+      "id": "gk",
+      "name": "高考核心词",
+      "subtitle": "高中 / 高考大纲",
+      "level": "B1",
+      "count": 2851,
+      "bytes": 187002,
+      "file": "gk.20261027.json",
+      "url": "/packs/gk.20261027.json",
+      "sha256": "2e527078b67807da1f61f76dda804317ddc2dfe21456dc068a191bdf6e059abc"
+    },
+    {
+      "id": "cet4",
+      "name": "四级核心词",
+      "subtitle": "大学英语四级",
+      "level": "B1",
+      "count": 3202,
+      "bytes": 216246,
+      "file": "cet4.20261027.json",
+      "url": "/packs/cet4.20261027.json",
+      "sha256": "30d8a5e398c868d87014509bfc0a48f5fd7d8ecad3f4d485c2b51781e2dfbd48"
+    },
+    {
+      "id": "cet6",
+      "name": "六级核心词",
+      "subtitle": "大学英语六级",
+      "level": "B2",
+      "count": 4566,
+      "bytes": 313541,
+      "file": "cet6.20261027.json",
+      "url": "/packs/cet6.20261027.json",
+      "sha256": "86166172f3fec124a338842106c1eb5d7b3ca0526ee0b78e43492065c923ce16"
+    },
+    {
+      "id": "ky",
+      "name": "考研核心词",
+      "subtitle": "考研英语大纲",
+      "level": "B2",
+      "count": 4032,
+      "bytes": 273395,
+      "file": "ky.20261027.json",
+      "url": "/packs/ky.20261027.json",
+      "sha256": "d3daa65fd39454f622383d327792a30bf643495bebfb28e3233914441b829e82"
+    }
+  ],
+  "unique": 6004
+}
